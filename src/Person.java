@@ -24,6 +24,12 @@ public class Person implements Comparable {
         return lastName.compareTo(p.lastName);
     }
 
+    @Override
+    public String toString() {
+        //return firstName + lastName + "from " + country + "\n";
+        return String.format("%s %s from %s \n", firstName, lastName, country);
+    }
+
     public int getId() {
         return id;
     }
@@ -38,12 +44,6 @@ public class Person implements Comparable {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
-    }
-
-    @Override
-    public String toString() {
-        //return firstName + lastName + "from " + country + "\n";
-        return String.format("%s %s from %s \n", firstName, lastName, country);
     }
 
     public String getLastName() {
